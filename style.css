@@ -1,0 +1,76 @@
+body {
+    background-color: rgb(50,50,50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#game-board {
+    display: grid;
+    width: 100vmin;
+    height: 100vmin;
+    background-color: #CCC;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+}
+
+.snake {
+    border: 0.25vmin solid black;
+}
+
+.food {
+    border: 0.25vmin solid black;
+}
+
+.obstacle {
+    border: 0.25vmin solid black;
+    background-color: black;
+}
+
+#score {
+    color: white;
+    font-size: 30px;
+    align-self: flex-start;
+}
+
+#back-button {justify-self:flex-start;position:absolute;top:0;left:0;text-decoration:none;color:white;text-align:center;width:70px;
+              height:30px;background-color:rgb(40,40,40);padding-top:5px;box-sizing:border-box;}
+#back-button:hover {cursor:pointer;background-color:rgb(35,35,35);}
+
+.results-window {background-color:rgb(172, 163, 163);width:45%;height:50%;display:grid;grid-template-columns:1fr;justify-content:center;
+                 align-items:start;
+                 grid-template-areas: "results"
+                                      "experience-bar"
+                                      "information";
+                }
+
+.results-window__results {font-size:30px;color:black;grid-area:results;background-color:rgb(75,75,75);margin:0 auto;text-decoration:underline;}
+.results-window__experience-bar {grid-area:experience-bar;background-color:grey;position:relative;height:25px;border-radius:10px;}
+.results-window__experience-bar__underneath {position:absolute;height:100%;background-color: orange;text-align:right;font-weight:600;
+                                             border-radius:10px;width:0px;margin-left:5px;}
+.results-window__level {position:absolute; top:-7px;left:-2px;background-color:gold;width:40px;height:40px;border-radius:50%;
+                        z-index:5;}
+.results-window__level__underneath {width:30px;height:30px;border-radius:50%;background-color:black;position:relative;top:5px;left:5px;}
+.results-window__level__underneath div {color:white;font-size:24px;font-weight:600;margin:auto;}
+.results-window__level__underneath__level-text {padding-left:8px;padding-top:3px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
+
+.results-window__informations div {font-size:26px;margin: 30px 10px;background-color:rgb(165,155,155);font-family:'Times New Roman', Times, serif;}
+
+.results-window__buttons {display:grid;align-self:end;width:100%;height:50px;justify-content:center;
+                          grid-template-columns:1fr 1fr 1fr;grid-template-rows:1fr;column-gap:5px;}
+
+.results-window__buttons div {font-size:30px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;cursor:pointer;
+                              width:100%;text-align:center;height:100%;padding-top:8px;box-sizing:border-box;background-color:rgb(90,90,90);}
+
+.results-window__buttons div:hover{background-color:rgb(75,75,75);}
+
+@media screen and (max-width: 800px) {
+    #game-board {
+        height: 85vmin;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content='ie=edge'>
+</head>
+<body>
+    <div class="starting-content">
+        <div class="starting-content__title">Snake.io</div>
+        <div class="starting-content__bar">
+            <div class="starting-content__bar__underneath-bar"></div>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0;
+        margin:0;
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+    }
+
+    .starting-content {
+        margin-bottom: 20%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+        width: 45%;
+        height: 45%;
+        row-gap: 100px;
+    }
+
+    .starting-content__title {
+        color: white;
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .starting-content__bar {
+        color:white;
+        height: 25px;
+        background-color: grey;
+        border-radius: 10px;
+    }
+
+    .starting-content__bar__underneath-bar {
+        width:0%;
+        height: 25px;
+        border-radius: 10px;
+        background-color: orange;
+        z-index: 5;
+        position:relative;
+        text-align: right;
+        font-size: 24px;
+        color: white;
+        font-weight: 500;
+    }
+
+
+</style>
+
+<script>
+
+// ----------------------------------------------VARIABLES-------------------------------------------------//
+var lastRenderTime = 0;
+let bar = document.getElementsByClassName('starting-content__bar__underneath-bar')[0];
+var count = 0;
+
+// ---------------------------------------------------FUNCTION----------------------------------------------//
+
+function main(currentTime) {
+    window.requestAnimationFrame(main);
+    let secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
+    if (secondsSinceLastRender < 1 / 150 * 7) return;
+    if (count < 100) {
+        count += 1;
+    } else {
+        window.location = 'file:///C:/Users/30695/Desktop/%CE%94%CE%97%CE%9C%CE%9F%CE%A3%CE%98%CE%95%CE%9D%CE%97%CE%A3/%CE%A0%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CF%8C%CF%82/Snake.io/MainMenu.html';
+    }
+    bar.style.width = `${count}%`;
+    bar.innerHTML = `${count}%`;
+    lastRenderTime = currentTime;
+}
+
+window.requestAnimationFrame(main);
+</script>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content='ie=edge'>
+    <link href="Menu.css" rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div class="Menu-container">
+        <div class="Menu-container__item"><a id="Resume_Game" href="#">Resume Game</a></div>
+        <div class="Menu-container__item" onclick="startNewGame()"><a href="index.html">New Game</a></div>
+        <div class="Menu-container__item"><a href="./shop.html">Shop</a></div>
+    </div>
+
+    <div class="footer">
+        <p>-Made by Dimos Theocharis-</p>
+    </div>
+</body>
+</html>
+
+
+<script>
+    function startNewGame() {
+        localStorage.setItem('Level', '1');
+        localStorage.setItem('Experience', '0');
+        localStorage.setItem('Total_Experience', '0');
+        localStorage.setItem('Coins', '0');
+        localStorage.setItem('Experience_Limit', '100');
+
+        localStorage.setItem('Snake Head Color', 'green');
+        localStorage.setItem('Snake Body Color', 'green');
+        
+        localStorage.setItem('Red Head Color', 'unsold');
+        localStorage.setItem('Blue Head Color', 'unsold');
+        localStorage.setItem('Yellow Head Color', 'locked');
+        localStorage.setItem('Purple Head Color', 'locked');
+        localStorage.setItem('Pink Head Color', 'locked');
+        localStorage.setItem('Orange Head Color', 'locked');
+        localStorage.setItem('Grey Head Color', 'locked');
+        localStorage.setItem('Black Head Color', 'locked');
+
+        localStorage.setItem('Red Body Color', 'unsold');
+        localStorage.setItem('Blue Body Color', 'unsold');
+        localStorage.setItem('Yellow Body Color', 'locked');
+        localStorage.setItem('Purple Body Color', 'locked');
+        localStorage.setItem('Pink Body Color', 'locked');
+        localStorage.setItem('Orange Body Color', 'locked');
+        localStorage.setItem('Grey Body Color', 'locked');
+        localStorage.setItem('Black Body Color', 'locked');
+    }
+    if (localStorage.getItem('Coins') !== null) {
+        console.log('true');
+        document.getElementById("Resume_Game").href = "./index.html";
+    } else {
+        document.getElementById('Resume_Game').href = "#";
+    }
+</script>
