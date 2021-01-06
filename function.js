@@ -37,7 +37,7 @@ function main(currentTime) {
         draw(); 
     } else {
         body.innerHTML = "";
-        window.location = "file:///C:/Users/30695/Desktop/%CE%94%CE%97%CE%9C%CE%9F%CE%A3%CE%98%CE%95%CE%9D%CE%97%CE%A3/%CE%A0%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CF%8C%CF%82/Snake.io/results.html";
+        window.location = "https://dimostheocharis.github.io/Snake.io/results.html";
     }
 }
 
@@ -211,7 +211,6 @@ class Apple {
                 SCORE_POINTS += LEVEL * 5;
             }
             this.goldenApple();
-            console.log(this.coordinates);
         }
     }
 }

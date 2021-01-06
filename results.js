@@ -55,15 +55,15 @@ function updateResults() {
         
         /*Kathe button sto results tha pigainei sto antistoixo file*/
         button_play_again.addEventListener('click', ()=> {
-            window.location = "file:///C:/Users/30695/Desktop/%CE%94%CE%97%CE%9C%CE%9F%CE%A3%CE%98%CE%95%CE%9D%CE%97%CE%A3/%CE%A0%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CF%8C%CF%82/Snake.io/index.html";
+            window.location = "https://dimostheocharis.github.io/Snake.io/index.html";
         })
 
         button_shop.addEventListener('click', ()=> {
-            window.location = "file:///C:/Users/30695/Desktop/%CE%94%CE%97%CE%9C%CE%9F%CE%A3%CE%98%CE%95%CE%9D%CE%97%CE%A3/%CE%A0%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CF%8C%CF%82/Snake.io/shop.html";
+            window.location = "https://dimostheocharis.github.io/Snake.io/shop.html";
         })
 
         button_main_menu.addEventListener('click', () => {
-            window.location = "file:///C:/Users/30695/Desktop/%CE%94%CE%97%CE%9C%CE%9F%CE%A3%CE%98%CE%95%CE%9D%CE%97%CE%A3/%CE%A0%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CF%8C%CF%82/Snake.io/mainMenu.html";
+            window.location = "https://dimostheocharis.github.io/Snake.io/MainMenu.html";
         })
     };
     bar.style.width = `${Math.floor(localStorage.getItem('Experience') / Number(Experience_Limit) * 100)}` + '%';
